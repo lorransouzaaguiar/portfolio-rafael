@@ -34,7 +34,8 @@ function PhotoManipulationAPI(){
             { url: 'imgs/photoManipulation/RantonShaolin1.png', w: 477, h: 284},
             { url: 'imgs/photoManipulation/RantoniHell1.png', w: 477, h: 341},
             { url: 'imgs/photoManipulation/PixelStretchTecnique1.png', w: 477, h: 246},
-            { url: 'imgs/photoManipulation/Revolution1.png', w: 1291, h: 923},
+            { url: 'imgs/photoManipulation/Revolution1.png', w: 1291, h: 923, full: true},
+            
         ]
 
         return imgs;

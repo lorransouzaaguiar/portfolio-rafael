@@ -4,7 +4,7 @@ function SocialMediaAPI(){
         const imgs = [
             {url: 'imgs/socialMedia/img1.png', w: 416, h: 416 },
             {url: 'imgs/socialMedia/img2.png', w: 420, h: 420},
-            {uri: 'imgs/socialMedia/img3.png', w: 420 , h: 420},
+            //{uri: 'imgs/socialMedia/img3.png', w: 420 , h: 420},
             {url: 'imgs/socialMedia/img4.png', w: 416, h: 416},
             {url: 'imgs/socialMedia/img5.png', w: 420, h: 747},
             {url: 'imgs/socialMedia/img6.png', w: 422, h: 596},

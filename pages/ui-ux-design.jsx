@@ -8,14 +8,12 @@ const Page = ({images}) => {
     return (
         <Layout>
             <Box 
-                maxH='15000px'
                 mb="80px"
                 p={['0px 25px', '0px 25px', '0px 75px', '0px 75px']}
-                style={{
+                sx={{
                     columns: '2',
                     columnGap:"10px",
                 }}
-                sx={''}
             >
             {
                 images.map((img, index) => {

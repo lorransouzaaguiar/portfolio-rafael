@@ -13,7 +13,7 @@ const Menu = () => {
             <ActiveLink href='/photo-manipulation'>photo-manipulation</ActiveLink>
             <ActiveLink href='/retouching'>retouching</ActiveLink>
             <ActiveLink href='/social-media'>social media</ActiveLink>
-            <ActiveLink href='/ui-ux-design'>uu/ux design</ActiveLink>
+            <ActiveLink href='/ui-ux-design'>ui/ux design</ActiveLink>
         </Flex>  
     )
 }

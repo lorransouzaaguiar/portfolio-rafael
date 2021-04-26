@@ -1,4 +1,4 @@
-import {Box, Center} from "@chakra-ui/react"
+import {Box} from "@chakra-ui/react"
 import Image from 'next/image'
 import Api from '../src/api/photoManipulation'
 import Layout from "../src/app/layout"
@@ -7,18 +7,17 @@ const Page = ({images}) => {
     
     return (
         <Layout>
-            <Box 
-                maxH='6000px'
+            <Box
                 mb="80px"
                 p={['0px 25px', '0px 25px', '0px 75px', '0px 75px']}
-                style={{
+                sx={{
                     columns: '3',
-                    columnGap:"10px",
+                    columnGap: '10px',
                 }}
-                sx={''}
             >
             {
                 images.map((img, index) => {
+                    
                     return (
                         <Image
                             key={index}
