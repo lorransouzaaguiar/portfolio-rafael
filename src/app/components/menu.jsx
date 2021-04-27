@@ -10,7 +10,7 @@ const Menu = () => {
             alignItems="center"
             p={['0 10px', '0 10px', '', '']}
         >   
-            <ActiveLink href='/photo-manipulation'>photo-manipulation</ActiveLink>
+            <ActiveLink href='/photo-manipulation'>photomanipulation</ActiveLink>
             <ActiveLink href='/retouching'>retouching</ActiveLink>
             <ActiveLink href='/social-media'>social media</ActiveLink>
             <ActiveLink href='/ui-ux-design'>ui/ux design</ActiveLink>

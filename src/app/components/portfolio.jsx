@@ -9,10 +9,6 @@ const Portfolio = (props) => {
             bgImage={['', '', `url('imgs/Chaser-1.jpg')`, `url('imgs/Chaser-1.jpg')`]}
             bgSize="100% 100%"
             bgRepeat="no-repeat"
-            pt={['21px', '21px', '88px', '88px']}
-            pl={['0', '0', '10%', '10%']}
-            pb={['0', '0', '84px', '84px']}
-
         >
             <Flex
                 direction="column" 
@@ -20,6 +16,10 @@ const Portfolio = (props) => {
                 alignItems={['center', 'center', 'start', 'start']}
                 h={['234px', '234px', "256px", "256px"]}
                 w={['100%', '100%', "635px", "635px"]}
+                position='absolute'
+                pt={['21px', '21px', '88px', '88px']}
+                pl={['0', '0', '10%', '10%']}
+                pb={['0', '0', '84px', '84px']}
             >
                 <Heading 
                     as="h1" 

@@ -36,7 +36,7 @@ const theme = extendTheme({
                     textDecoration: 'none'
                 },
                 _focus: 'none',
-                textTransform: 'uppercase'
+                textTransform: 'uppercase',
             },
         }
     }

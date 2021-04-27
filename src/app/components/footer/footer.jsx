@@ -7,19 +7,19 @@ const Footer = () => {
             height="650px" 
             as="footer"
             direction="column" 
-            bgImage={[
-                `url('imgs/mobile/footer.png')`,
-                `url('imgs/mobile/footer.png')`,
-                `url('imgs/Where-can-you-find-me.jpg')`,
-                `url('imgs/Where-can-you-find-me.jpg')`]}
-            bgRepeat="no-repeat"
-            bgSize="100% 100%"
         >
             <Box
                 pl={['0px', '0px', '10%', '10%']}
                 pb={['0px', '0px', '112px', '112px']}
                 pt="65px"
                 h='540px'
+                bgImage={[
+                    `url('imgs/mobile/footer.png')`,
+                    `url('imgs/mobile/footer.png')`,
+                    `url('imgs/Where-can-you-find-me.jpg')`,
+                    `url('imgs/Where-can-you-find-me.jpg')`]}
+                bgRepeat="no-repeat"
+                bgSize="100% 100%"
             >
                 <Flex 
                     direction="column"

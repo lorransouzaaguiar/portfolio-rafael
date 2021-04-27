@@ -8,15 +8,16 @@ const AboutMe = () => {
             bgImage={['', '', `url('imgs/About-me.jpg')`, `url('imgs/About-me.jpg')`]}
             bgRepeat="no-repeat"
             bgSize="100% 100%"
-            pt={['38px', '38px', '88px', '88px']}
-            pl={['0', '0', '10%', '10%']}
-            pb={['0', '0', '84px', '84px']}
         >
             <Flex 
                 direction="column" 
                 alignItems={['center', 'center', 'start', 'start']}
                 h={['234px', '234px', "256px", "256px"]}
                 w={['100%', '100%', "635px", "635px"]}
+                position='absolute'
+                pt={['38px', '38px', '88px', '88px']}
+                pl={['0', '0', '10%', '10%']}
+                pb={['0', '0', '84px', '84px']}
         
             >
                 <Heading 
@@ -44,6 +45,7 @@ const AboutMe = () => {
                         Keep scrooling if you want to understand more of my work!
                     </Text>
             </Flex>
+            
         </Flex>
     )
 }
