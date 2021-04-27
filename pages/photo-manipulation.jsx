@@ -10,7 +10,7 @@ const Page = ({images}) => {
             <VStack
                 mb="80px"
                 p={['0px 25px', '0px 25px', '0px 75px', '0px 75px']}
-                alignItems='center'
+                
             >
                 <HStack spacing='0.5rem'> 
                    {generateImage(images,1,2)}
