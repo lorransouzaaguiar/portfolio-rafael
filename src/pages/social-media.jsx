@@ -1,8 +1,6 @@
 import {HStack, VStack, Flex} from "@chakra-ui/react"
-import Image from 'next/image'
-import Api from '../src/api/socialMedia'
-import Layout from "../src/app/layout"
-import generateImage from "../src/components/generateImage"
+import Layout from "../app/layout"
+import generateImage from "../components/generateImage"
 
 const Page = ({images}) => {
     
@@ -64,9 +62,9 @@ const Page = ({images}) => {
     )  
 }
 
-export function getStaticProps(context){
-    const api = new Api()
-    const images = api.getAll()
+export async function getStaticProps(context){
+    const response = await fetch('http://localhost:3000/api/socialMedia')
+    const images = await response.json()
     return {
         props: {
             images,

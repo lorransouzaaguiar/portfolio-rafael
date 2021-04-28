@@ -1,9 +1,6 @@
 import {HStack, VStack} from "@chakra-ui/react"
-import Image from 'next/image'
-import Api from '../src/api/retouching'
-import Layout from "../src/app/layout"
-import generateImage from "../src/components/generateImage"
-const api = new Api()
+import Layout from "../app/layout"
+import generateImage from "../components/generateImage"
     
 const Page = ({images}) => {
     
@@ -28,13 +25,13 @@ const Page = ({images}) => {
     )  
 }
 
-export function getStaticProps(context){
-    const images = api.getAll()
-    
+export async function getStaticProps(context){
+    const response = await fetch('http://localhost:3000/api/retouching')
+    const images = await response.json()
     return {
         props: {
             images,
-        }
+        },
     }
 }
 

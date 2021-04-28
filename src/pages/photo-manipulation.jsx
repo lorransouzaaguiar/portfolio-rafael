@@ -1,7 +1,6 @@
 import {Flex, HStack, VStack} from "@chakra-ui/react"
-import Api from '../src/api/photoManipulation'
-import Layout from "../src/app/layout"
-import generateImage from '../src/components/generateImage'
+import Layout from "../app/layout"
+import generateImage from '../components/generateImage'
 
 const Page = ({images}) => {
 
@@ -12,7 +11,7 @@ const Page = ({images}) => {
                 p={['0px 25px', '0px 25px', '0px 75px', '0px 75px']}
                 
             >
-                <HStack pr='0.5rem'> 
+               <HStack pr='0.5rem'> 
                    {generateImage(images,1,2)}
                 </HStack>
                 <HStack pr='0.5rem'>
@@ -52,15 +51,14 @@ const Page = ({images}) => {
                 <HStack pr='0.5rem'>
                     {generateImage(images, 33, 33)}
                 </HStack>
-                    
             </VStack>
         </Layout>
     )  
 }
 
-export function getStaticProps(context){
-    const api = new Api()
-    const images = api.getAll()
+export async function getStaticProps(context){
+    const response = await fetch('http://localhost:3000/api/photo-manipulation')
+    const images = await response.json()
     return {
         props: {
             images,

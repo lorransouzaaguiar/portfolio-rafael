@@ -1,7 +1,6 @@
 import {Flex, VStack} from "@chakra-ui/react"
-import Api from '../src/api/ui-ux'
-import Layout from "../src/app/layout"
-import generateImage from "../src/components/generateImage"
+import Layout from "../app/layout"
+import generateImage from "../components/generateImage"
 
 const Page = ({images}) => {
     
@@ -24,9 +23,9 @@ const Page = ({images}) => {
     )  
 }
 
-export function getStaticProps(context){
-    const api = new Api()
-    const images = api.getAll()
+export async function getStaticProps(context){
+    const response = await fetch('http://localhost:3000/api/ui-ux')
+    const images = await response.json()
     return {
         props: {
             images,

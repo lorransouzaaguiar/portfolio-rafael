@@ -6,7 +6,7 @@ export default function generateImage(images, start, end){
         const newImages = images.filter(img => img.id >= start && img.id <= end)
         return newImages.map(img => {
             return (
-                <Box>
+                <Box key={img.id}>
                     <Image
                         key={img.id}
                         src={img.url}

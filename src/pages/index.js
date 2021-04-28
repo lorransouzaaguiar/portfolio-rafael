@@ -1,4 +1,4 @@
-import Layout from '../src/app/layout'
+import Layout from '../app/layout'
 import {useEffect} from 'react'
 import {useRouter} from 'next/router'
 
