@@ -1,34 +1,25 @@
-import {Box, Center} from "@chakra-ui/react"
-import Image from 'next/image'
+import {Flex, VStack} from "@chakra-ui/react"
 import Api from '../src/api/ui-ux'
 import Layout from "../src/app/layout"
+import generateImage from "../src/components/generateImage"
 
 const Page = ({images}) => {
     
     return (
         <Layout>
-            <Box 
+            <VStack
                 mb="80px"
                 p={['0px 25px', '0px 25px', '0px 75px', '0px 75px']}
-                sx={{
-                    columns: '2',
-                    columnGap:"10px",
-                }}
             >
-            {
-                images.map((img, index) => {
-                    return (
-                        <Image
-                            key={index}
-                            src={`/${img.url}`}
-                            width={img.w}
-                            height={img.h}
-                            loading='eager'
-                        />
-                    )
-                })
-            }
-            </Box>
+                 <Flex>
+                    <VStack pr='0.5rem'>
+                        {generateImage(images, 1, 5)}
+                    </VStack>
+                    <VStack>
+                        {generateImage(images, 6, 11)}
+                    </VStack>
+                 </Flex>
+            </VStack>
         </Layout>
     )  
 }
