@@ -12,13 +12,13 @@ const Page = ({images}) => {
                 p={['0px 25px', '0px 25px', '0px 75px', '0px 75px']}
                 
             >
-                <HStack spacing='0.5rem'> 
+                <HStack pr='0.5rem'> 
                    {generateImage(images,1,2)}
                 </HStack>
-                <HStack spacing='0.5rem'>
+                <HStack pr='0.5rem'>
                     {generateImage(images,3,4)}
                 </HStack>
-                <HStack>
+                <HStack pr='0.5rem'>
                     <VStack>
                         {generateImage(images,5,8)}
                     </VStack>
@@ -26,7 +26,7 @@ const Page = ({images}) => {
                         {generateImage(images,9,12)}
                     </VStack>
                 </HStack>
-                <Flex>
+                <Flex pr='0.5rem'>
                     <VStack justify='space-between' pr='0.5rem'>
                         {generateImage(images, 13, 19)}
                     </VStack>
@@ -37,17 +37,22 @@ const Page = ({images}) => {
                         </HStack>
                         {generateImage(images, 25, 26)}
                     </VStack>
-                </Flex>
+                </Flex >
+                <HStack pr='0.5rem'>
                     {generateImage(images, 27, 27)}
-                    <Flex>
-                        <VStack justify='space-between' pr='0.5rem'>
-                            {generateImage(images, 28, 29)}
-                        </VStack>
-                        <VStack>
-                            {generateImage(images, 30, 32)}
-                        </VStack>
-                    </Flex>
+                </HStack>
+                <Flex pr='0.5rem'>
+                    <VStack justify='space-between' pr='0.5rem'>
+                        {generateImage(images, 28, 29)}
+                    </VStack>
+                    <VStack>
+                        {generateImage(images, 30, 32)}
+                    </VStack>
+                </Flex>
+                <HStack pr='0.5rem'>
                     {generateImage(images, 33, 33)}
+                </HStack>
+                    
             </VStack>
         </Layout>
     )  

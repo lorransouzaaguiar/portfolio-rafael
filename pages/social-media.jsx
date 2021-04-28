@@ -1,34 +1,65 @@
-import {Box} from "@chakra-ui/react"
+import {HStack, VStack, Flex} from "@chakra-ui/react"
 import Image from 'next/image'
 import Api from '../src/api/socialMedia'
 import Layout from "../src/app/layout"
+import generateImage from "../src/components/generateImage"
 
 const Page = ({images}) => {
     
     return (
         <Layout>
-            <Box 
+            <VStack
                 mb="80px"
-                p={['0px 25px', '0px 25px', '0px 75px', '0px 75px']}
-                sx={{
-                    columns: '3',
-                    columnGap:"10px",
-                }}
+                p={['0px 25px', '0px 25px', '0px 75px', '0px 75px']} 
             >
-            {
-                images.map((img, index) => {
-                    return (
-                        <Image
-                            key={index}
-                            src={`/${img.url}`}
-                            width={img.w}
-                            height={img.h}
-                            loading='eager'
-                        />
-                    )
-                })
-            }
-            </Box>
+                <HStack>
+                    {generateImage(images, 1, 3)}
+                </HStack> 
+                <Flex>
+                    <VStack>
+                        <Flex>
+                            <VStack pr='0.5rem'>
+                                {generateImage(images, 4, 6)}
+                            </VStack>
+                            <VStack justify='space-between'>
+                                {generateImage(images, 7, 8)}
+                            </VStack>
+                        </Flex>
+                        {generateImage(images, 9, 9)}
+                    </VStack>
+                    <VStack justify={['', '', 'space-between', 'space-between']} pl='0.5rem'>
+                        {generateImage(images, 10, 11)}
+                    </VStack>
+                </Flex>
+                <Flex>
+                    <VStack>
+                        <HStack>
+                            {generateImage(images, 12, 13)}
+                        </HStack>
+                            {generateImage(images, 14, 14)}
+                        <HStack>
+                            {generateImage(images, 15, 16)}
+                        </HStack>
+                    </VStack>
+                    <VStack justify={['', '', 'space-between', 'space-between']} pl='0.5rem'>
+                        {generateImage(images, 17, 18)}
+                    </VStack>
+                </Flex>
+                <Flex>
+                    <VStack justify={['', '', 'space-between', 'space-between']}>
+                        {generateImage(images, 19, 21)}
+                    </VStack>
+                    <VStack pl='0.5rem'>
+                        {generateImage(images, 22, 23)}
+                    </VStack>
+                </Flex>
+                <HStack>
+                    {generateImage(images, 24, 26)}
+                </HStack>
+                <HStack>
+                    {generateImage(images, 26, 28)}
+                </HStack>
+            </VStack>
         </Layout>
     )  
 }
