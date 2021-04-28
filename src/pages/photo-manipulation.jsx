@@ -1,6 +1,7 @@
 import {Flex, HStack, VStack} from "@chakra-ui/react"
 import Layout from "../app/layout"
 import generateImage from '../components/generateImage'
+import axios from 'axios'
 
 const Page = ({images}) => {
     return (
@@ -57,8 +58,8 @@ const Page = ({images}) => {
 
 export async function getStaticProps(context){
     const url = process.env.URI + 'api/photo-manipulation'
-    const response = await fetch(url)
-    const images = await response.json()
+    const response = await axios.get(url)
+    const images = response.data
     return {
         props: {
             images,
