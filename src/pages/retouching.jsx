@@ -3,7 +3,6 @@ import Layout from "../app/layout"
 import generateImage from "../components/generateImage"
     
 const Page = ({images}) => {
-    
     return (
         <Layout>
             <VStack
@@ -26,7 +25,8 @@ const Page = ({images}) => {
 }
 
 export async function getStaticProps(context){
-    const response = await fetch('http://localhost:3000/api/retouching')
+    const url = process.env.URI + 'api/retouching'
+    const response = await fetch(url)
     const images = await response.json()
     return {
         props: {

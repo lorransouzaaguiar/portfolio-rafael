@@ -3,7 +3,6 @@ import Layout from "../app/layout"
 import generateImage from '../components/generateImage'
 
 const Page = ({images}) => {
-
     return (
         <Layout>
             <VStack
@@ -11,8 +10,8 @@ const Page = ({images}) => {
                 p={['0px 25px', '0px 25px', '0px 75px', '0px 75px']}
                 
             >
-               <HStack pr='0.5rem'> 
-                   {generateImage(images,1,2)}
+                <HStack pr='0.5rem'> 
+                    {generateImage(images,1,2)}
                 </HStack>
                 <HStack pr='0.5rem'>
                     {generateImage(images,3,4)}
@@ -51,13 +50,14 @@ const Page = ({images}) => {
                 <HStack pr='0.5rem'>
                     {generateImage(images, 33, 33)}
                 </HStack>
-            </VStack>
+            </VStack>   
         </Layout>
     )  
 }
 
 export async function getStaticProps(context){
-    const response = await fetch('http://localhost:3000/api/photo-manipulation')
+    const url = process.env.URI + 'api/photo-manipulation'
+    const response = await fetch(url)
     const images = await response.json()
     return {
         props: {
@@ -67,4 +67,3 @@ export async function getStaticProps(context){
 }
 
 export default Page
-
