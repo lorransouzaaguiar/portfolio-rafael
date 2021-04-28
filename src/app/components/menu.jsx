@@ -1,20 +1,19 @@
-import {Flex} from "@chakra-ui/react"
+import {HStack} from "@chakra-ui/react"
 import ActiveLink from "../../components/activeLink"
 
 const Menu = () => {
     return (
-        <Flex
+        <HStack
             as="nav"
             h="100px"
-            justifyContent="center"
-            alignItems="center"
-            p={['0 10px', '0 10px', '', '']}
+            p={['0px 25px', '0px 25px', '', '']}
+            justify='center'
         >   
             <ActiveLink href='/photo-manipulation'>photomanipulation</ActiveLink>
             <ActiveLink href='/retouching'>retouching</ActiveLink>
             <ActiveLink href='/social-media'>social media</ActiveLink>
             <ActiveLink href='/ui-ux-design'>ui/ux design</ActiveLink>
-        </Flex>  
+        </HStack>  
     )
 }
 

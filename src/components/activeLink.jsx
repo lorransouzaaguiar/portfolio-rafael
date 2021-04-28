@@ -20,7 +20,7 @@ export default function ActiveLink({children, href}){
             sx={style}
             color='#262227' 
             m='2px'
-            fontSize={['8px', '11px', '20px', '20px']}
+            fontSize={['0.7em', '0.7em', '1em', '1.5em']}
         >
             {children}
         </Link>
