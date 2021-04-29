@@ -1,4 +1,4 @@
-export default function getAllPhotoManipulation(req, res){
+export default (req, res) => {
     const method = req.method
     if(method === 'GET'){
         res.status(200).json(
