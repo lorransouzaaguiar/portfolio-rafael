@@ -57,7 +57,7 @@ const Page = ({images}) => {
 }
 
 export async function getStaticProps(context){
-    const url = process.env.URI + 'api/photo-manipulation'
+    const url = 'https://portfolio-rafael.vercel.app/api/photo-manipulation'
     const response = await axios.get(url)
     const images = response.data
     return {
