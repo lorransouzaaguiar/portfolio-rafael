@@ -63,7 +63,7 @@ const Page = ({images}) => {
 }
 
 export async function getStaticProps(context){
-    const url = process.env.URI + 'api/social-media'
+    const url = process.env.URI + '/api/social-media'
     const response = await axios.get(url)
     const images = response.data
     return {
