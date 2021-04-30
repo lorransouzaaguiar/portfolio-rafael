@@ -8,24 +8,31 @@ import Footer from '../app/components/footer/footer'
 
 export default function Layout({children}){
     return (
-        <Flex bgColor="#151316" direction="Column">
-        <Head>
-            <title>RFLCooper Portfolio</title>
-        </Head>
-        <Header/>
-            <Box
-                bgRepeat="no-repeat"
-                bgSize="100% 100%"
-                bgImage={[`url('imgs/mobile/section.png')`, `url('imgs/mobile/section.png')`, '', '']}
-                h={['504px', '504px', "100%", "100%"]}
-            >
-                <AboutMe/>
-                <Portfolio/>
-            </Box>
-            <Link name="page"/>
-            <Menu/>
-            {children}
-            <Footer/>
-        </Flex>
+        <>
+            <Head>
+                <title>RFLCooper Portfolio</title>
+                <meta name='description' content='I’m a graphic designer, and digital artist looking to improve a little everyday!'/>
+                <link rel='canonical' href='link da pagina'/>
+                <meta name='author' content='RFLCooper0'/>
+                <meta name='robots' content='index'/>
+
+            </Head>
+            <Flex bgColor="#151316" direction="Column">
+            <Header/>
+                <Box
+                    bgRepeat="no-repeat"
+                    bgSize="100% 100%"
+                    bgImage={[`url('imgs/mobile/section.png')`, `url('imgs/mobile/section.png')`, '', '']}
+                    h={['504px', '504px', "100%", "100%"]}
+                >
+                    <AboutMe/>
+                    <Portfolio/>
+                </Box>
+                <Link name="page"/>
+                <Menu/>
+                {children}
+                <Footer/>
+            </Flex>
+        </>
     )
 }
