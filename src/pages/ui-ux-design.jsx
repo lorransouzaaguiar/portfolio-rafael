@@ -24,7 +24,7 @@ const Page = ({images}) => {
 }
 
 export async function getStaticProps(context){
-    const url = 'https://portfolio-rafael.vercel.app/api/ui-ux'
+    const url = process.env.URI + '/api/ui-ux'
     const response = await axios.get(url)
     const images = response.data
     return {
