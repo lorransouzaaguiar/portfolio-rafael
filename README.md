@@ -7,5 +7,5 @@ https://portfolio-rafael.vercel.app
 Esse é o portfolio desenvolvido por mim do meu amigo Rafael que é design. Ele desenvolvou todo o Layout da página e eu criei a aplicação.
 
 ### Tecnologias usadas:
-* React js
 * Next js
+* Chakra-ui
